@@ -4,6 +4,7 @@ import { Icon } from 'react-icons-kit';
 import { eyeOff } from 'react-icons-kit/feather/eyeOff';
 import { eye } from 'react-icons-kit/feather/eye';
 import { Link } from "react-router";
+import {Loader2} from "lucide-react"
 import AuthImagePattern from '../components/AuthImagePattern';
 import toast from 'react-hot-toast';
 
@@ -33,7 +34,7 @@ const SignUpPage = () => {
 
     if (success === true) {
       signup(formData);
-    }
+    }  
   };
 
   return (
