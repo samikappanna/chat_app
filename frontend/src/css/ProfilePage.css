@@ -1,0 +1,10 @@
+/* ProfilePage.css */
+.profile-container {
+    overflow-y: auto;
+}
+
+@media (min-width: 1024px) {
+    .profile-container {
+        overflow-y: hidden;
+    }
+}

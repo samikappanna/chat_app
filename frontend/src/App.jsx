@@ -27,7 +27,7 @@ const App = () => {
   
 
   return (
-    <div>
+    <div datat-theme="retro">
       <Navbar/>
 
       <Routes>
