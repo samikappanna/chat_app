@@ -20,7 +20,8 @@ export const getMessages = async(req,res)=>{
 
         const messages =await Message.find({
             $or:[
-                {senderId:myId, recieverId:recieverId},
+                {senderId:myId, recieverId:userToChatId
+                },
                 {senderId:userToChatId, recieverId:myId}
             ]
         })
@@ -39,7 +40,7 @@ export const sendMessage = async(req,res) =>{
 
         const senderId=req.user._id
 
-        let imgUrl;
+        let imageUrl;
         if (image){
             const uploadResponse = await cloudinary.uploader.upload(image);
             imageUrl = uploadResponse.secure_url;
